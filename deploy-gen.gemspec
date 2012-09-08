@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.homepage    = "http://twitter.com/mfilippovich"
   s.summary     = "Deploy generator for AggregationPlatform"
   s.description = "Bootstrap all needable config for deploy and run AggregationPlatform's project"
-  s.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  s.executables   = ["deploy-gen"]
   s.files = Dir["{lib,bin,templates}/**/*"] + ["Rakefile", "README.md", "Gemfile"]
 
   s.add_dependency "thor"
