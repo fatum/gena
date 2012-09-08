@@ -1,0 +1,1 @@
+unicorn: cd /srv/projects/<%= app_name %>/current && bundle exec unicorn_rails -c config/unicorn.rb -E staging

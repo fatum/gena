@@ -1,0 +1,9 @@
+recheck_sources:
+  class: "Extract::RecheckSourcesWorker"
+  every: "5m"
+  description: "Fetch updates from sources"
+
+update_scores:
+  class: "Score::CheckWorker"
+  every: "5m"
+  description: "Update facebook's likes and another metricks for each item"
