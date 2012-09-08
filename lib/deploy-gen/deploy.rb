@@ -26,7 +26,7 @@ module DeployGen
       def add_gems
         append_to_file 'Gemfile', "gem 'sidekiq'\n"
         append_to_file 'Gemfile', "gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'\n"
-        append_to_file 'Gemfile', "gem 'twitter_text', :git => 'git://github.com/twitter/twitter-text-rb.git'\n"
+        append_to_file 'Gemfile', "gem 'twitter-text', :git => 'git://github.com/twitter/twitter-text-rb.git'\n"
         append_to_file 'Gemfile', "gem 'aggregation-platform', git: 'git@github.com:fatum/aggregation-platform.git'\n"
         append_to_file 'Gemfile', "gem 'deploy-recipes', git: 'git@github.com:fatum/deploy-recipes.git'\n"
       end
