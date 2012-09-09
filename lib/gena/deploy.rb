@@ -26,7 +26,7 @@ module Gena
       end
 
       def add_gems
-        append_to_file 'Gemfile', "## Imported by gem 'gena'\n"
+        append_to_file 'Gemfile', "\n## Imported by gem 'gena'\n"
         append_to_file 'Gemfile', "gem 'sidekiq'\n"
         append_to_file 'Gemfile', "gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'\n"
         append_to_file 'Gemfile', "gem 'twitter-text', :git => 'git://github.com/twitter/twitter-text-rb.git'\n"
@@ -36,7 +36,7 @@ module Gena
 
       def capify
         run "bundle install --path=vendor/gems"
-        run "bundle exec rake ap:aggregation_platform_engine:install:migrations"
+        run "bundle exec rake aggregation_platform_engine:install:migrations"
         run "bundle exec capify ."
       end
 
