@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    deploy-gen (0.0.1)
+    gena (0.0.2)
       thor
 
 GEM
@@ -14,5 +14,5 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  deploy-gen!
+  gena!
   rake

@@ -1,9 +1,12 @@
-recheck_sources:
-  class: "Extract::RecheckSourcesWorker"
-  every: "5m"
-  description: "Fetch updates from sources"
+schedule:
+  recheck_sources:
+    class: "Extract::RecheckSourcesWorker"
+    every: "5m"
+    queue: "recheck_sources"
+    description: "Fetch updates from sources"
 
-update_scores:
-  class: "Score::CheckWorker"
-  every: "5m"
-  description: "Update facebook's likes and another metricks for each item"
+  update_scores:
+    class: "Score::CheckWorker"
+    every: "5m"
+    queue: "update_scores"
+    description: "Update facebook's likes and another metricks for each item"

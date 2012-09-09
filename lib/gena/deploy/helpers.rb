@@ -1,5 +1,6 @@
 require 'bundler'
-module DeployGen
+
+module Gena
   module Generator
     module DeployHelpers
       attr_accessor :production_server_name
