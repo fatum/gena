@@ -45,6 +45,7 @@ module Gena
         config/deploy/staging.rb
         config/deploy.rb
         config/sidekiq.yml
+        config/database.yml
         config/schedule.rb
         config/unicorn.rb
         config/initializers/sidekiq.rb

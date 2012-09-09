@@ -1,0 +1,31 @@
+development:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: <%= app_name %>_development
+  pool: 25
+  username: root
+
+test:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: <%= app_name %>_test
+  pool: 25
+  username: root
+
+staging:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: <%= app_name %>_staging
+  pool: 25
+  username: root
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: <%= app_name %>_production
+  pool: 25
+  username: root
