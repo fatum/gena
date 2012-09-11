@@ -1,12 +1,21 @@
+# Sidekiq config example
+#---
+#:verbose: false
+#:concurrency:  25
+#:queues:
+#  - [often, 7]
+#  - [default, 5]
+#  - [seldom, 3]
+
 schedule:
   recheck_sources:
     class: "Extract::RecheckSourcesWorker"
     every: "5m"
-    queue: "recheck_sources"
+    queue: "default"
     description: "Fetch updates from sources"
 
   update_scores:
     class: "Score::CheckWorker"
     every: "5m"
-    queue: "update_scores"
+    queue: "default"
     description: "Update facebook's likes and another metricks for each item"
