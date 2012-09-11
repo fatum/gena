@@ -4,7 +4,9 @@
 rails_env = ENV['RAILS_ENV'] || 'production'
 worker_processes (rails_env == 'production' ? 4 : 2)
 
-APP_PATH = "/srv/projects/<%= app_name %>"
+projects_path = rails_env == 'production' ? 'projects' : 'staging'
+APP_PATH = "/srv/#{projects_path}/<%= app_name %>"
+
 CURRENT = File.join(APP_PATH, 'current')
 SHARED = File.join(APP_PATH, 'shared')
 
