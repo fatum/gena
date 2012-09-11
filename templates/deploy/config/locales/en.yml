@@ -1,0 +1,2 @@
+en:
+  sitename: "<%= app_name %>"

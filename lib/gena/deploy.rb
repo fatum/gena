@@ -43,6 +43,7 @@ module Gena
       REGULAR_FILES = %w{
         config/deploy/production.rb
         config/deploy/staging.rb
+        config/locales/en.yml
         config/deploy.rb
         config/sidekiq.yml
         config/database.yml
