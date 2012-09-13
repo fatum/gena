@@ -14,6 +14,12 @@ schedule:
     queue: "default"
     description: "Fetch updates from sources"
 
+  recrawl:
+    class: "Extract::RecrawlerWorker"
+    every: "10m"
+    queue: "default"
+    description: "Recrawl failed urls"
+
   update_scores:
     class: "Score::CheckWorker"
     every: "5m"
