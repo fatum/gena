@@ -3,7 +3,7 @@ require 'sidekiq'
 require 'sidekiq-scheduler'
 
 Sidekiq.configure_server do |config|
-  config.redis = { :url => 'redis://localhost:6379/2', :namespace => 'applenews' }
+  config.redis = { :url => 'redis://localhost:6379/2', :namespace => '<%= app_name %>' }
 end
 
 if defined? Sidekiq.schedule
