@@ -47,6 +47,7 @@ module Gena
         config/locales/en.yml
         config/deploy.rb
         config/sidekiq.yml
+        config/sphinx.yml
         config/database.yml
         config/schedule.rb
         config/unicorn.rb
