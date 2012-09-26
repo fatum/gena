@@ -27,7 +27,7 @@ module Gena
 
       def add_gems
         append_to_file 'Gemfile', "\n## Imported by gem 'gena'\n"
-        append_to_file 'Gemfile', "gem 'sidekiq'\n"
+        append_to_file 'Gemfile', "gem 'sidekiq', '2.3.0'\n"
         append_to_file 'Gemfile', "gem 'sidekiq-scheduler', git: 'git://github.com/fatum/sidekiq-scheduler.git', branch: 'develop'\n"
         append_to_file 'Gemfile', "gem 'bootstrap_kaminari', :git => 'git://github.com/dleavitt/bootstrap_kaminari.git'\n"
         append_to_file 'Gemfile', "gem 'twitter-text', :git => 'git://github.com/twitter/twitter-text-rb.git'\n"
