@@ -52,6 +52,7 @@ module Gena
         config/schedule.rb
         config/unicorn.rb
         config/initializers/sidekiq.rb
+        config/initializers/rabl.rb
         config/upstart/Procfile.production
         config/upstart/Procfile.staging
       }
