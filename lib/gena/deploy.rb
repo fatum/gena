@@ -42,6 +42,7 @@ module Gena
       end
 
       REGULAR_FILES = %w{
+        app/assets/stylesheets/active_admin.css.scss
         config/deploy/production.rb
         config/environments/production.rb
         config/deploy/staging.rb
