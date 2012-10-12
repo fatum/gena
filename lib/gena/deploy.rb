@@ -36,7 +36,7 @@ module Gena
       end
 
       def capify
-        run "bundle install --path=vendor/gems"
+        run "bundle"
         run "bundle exec rake aggregation_platform_engine:install:migrations"
         run "bundle exec capify ."
       end
