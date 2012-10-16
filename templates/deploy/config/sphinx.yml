@@ -1,6 +1,10 @@
 # Setup specific per-project ip
 production:
   port: 3200
+  searchd_file_path: /srv/projects/<%= app_name %>/shared/db/sphinx/production
+  pid_file: /srv/projects/<%= app_name %>/shared/pids/searchd.pid
+  searchd_log_file: /srv/projects/<%= app_name %>/shared/log/searchd.log
+  query_log_file: /srv/projets/<%= app_name %>/shared/log/searchd.query.log
 
 staging:
   port: 3201
