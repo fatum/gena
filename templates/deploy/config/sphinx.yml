@@ -8,3 +8,7 @@ production:
 
 staging:
   port: 3201
+  searchd_file_path: /srv/staging/<%= app_name %>/shared/db/sphinx/staging
+  pid_file: /srv/staging/<%= app_name %>/shared/pids/searchd.pid
+  searchd_log_file: /srv/staging/<%= app_name %>/shared/log/searchd.log
+  query_log_file: /srv/staging/<%= app_name %>/shared/log/searchd.query.log
