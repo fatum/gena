@@ -1,0 +1,2 @@
+unicorn: cd /srv/projects/<%= app_name %>/current && bundle exec unicorn_rails -c config/unicorn.rb -E production
+scheduler: cd /srv/projects/<%= app_name %>/current && bundle exec sidekiq-scheduler -C config/sidekiq.yml -e production

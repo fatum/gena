@@ -1,11 +1,10 @@
 # Sidekiq config example
 #---
-#:verbose: false
-#:concurrency:  25
-#:queues:
-#  - [often, 7]
-#  - [default, 5]
-#  - [seldom, 3]
+:verbose: true
+:concurrency:  8
+:queues:
+  - default
+  - stats
 
 schedule:
   recheck_sources:
@@ -22,6 +21,6 @@ schedule:
 
   update_scores:
     class: "Score::CheckWorker"
-    every: "5m"
+    every: "10m"
     queue: "default"
     description: "Update facebook's likes and another metricks for each item"

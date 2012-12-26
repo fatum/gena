@@ -1,6 +1,6 @@
 require 'thor'
 require 'gena/version'
-require 'gena/deploy'
+require 'gena/aggregator'
 require 'gena/sinatra_app'
 require 'gena/goliath'
 
@@ -17,15 +17,14 @@ module Gena
         invoke Gena::Generator::Goliath
       end
 
-      desc "deploy", "Generate deploy-related files"
+      desc "aggregator APPNAME", "Generate aggregator-related deploy files"
       method_option 'name'
       method_option 'production-server-name'
       method_option 'staging-server-name'
       method_option 'no-rails', :default => false
-      #method_option 'set-real-ip-from'
 
-      def deploy
-        invoke Gena::Generator::Deploy
+      def aggregator
+        invoke Gena::Generator::Aggregator
       end
     end
   end

@@ -1,0 +1,17 @@
+source :rubygems
+
+gem 'sinatra-contrib'
+gem 'sequel'
+gem 'pg'
+gem 'rake'
+
+# Test
+group :test do
+  gem 'rspec'
+  gem 'rack-test'
+end
+
+group :test, :development do
+  gem 'sqlite3'
+end
+

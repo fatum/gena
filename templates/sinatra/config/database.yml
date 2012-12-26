@@ -1,0 +1,22 @@
+db_conf:
+  production:
+    adapter: postgres
+    database: 
+    host:
+    port:
+    user:
+    password: 
+  staging: 
+    adapter: postgres
+    database: 
+    host:
+    port:
+    user:
+    password: 
+  development:
+    adapter: sqlite
+    database: db/development.sqlite3
+  test:
+    adapter: sqlite
+    database: db/test.sqlite3
+

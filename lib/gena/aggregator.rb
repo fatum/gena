@@ -3,11 +3,11 @@ require 'gena/deploy/helpers'
 
 module Gena
   module Generator
-    class Deploy < Thor::Group
+    class Aggregator < Thor::Group
       include Thor::Actions
       include Gena::Generator::DeployHelpers
 
-      self.source_paths << File.join(File.dirname(__FILE__), '../../templates/deploy')
+      self.source_paths << File.join(File.dirname(__FILE__), '../../templates/aggreagtor')
 
       def ask_for_missing_options
         self.production_server_name = options['production-server-name'] ||
